@@ -1063,7 +1063,6 @@
     <string name="show_last_update_time">Show last updated time</string>
     <string name="refresh_list">Refresh list</string>
     <string name="tip_divider_color">Separator color</string>
-    <string name="same_title_removed">Remove duplicate title</string>
     <string name="update_book_fail">Update failed</string>
     <string name="notification_permission_rationale">Reading requires sending notifications to show reading control and download progress</string>
     <string name="webdav_after_local_restore_confirm">The webDav book source is newer than the local one, whether to restore it or not</string>
