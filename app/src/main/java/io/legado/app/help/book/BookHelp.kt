@@ -340,14 +340,6 @@ object BookHelp {
     /**
      * 删除章节内容
      */
-    fun delContent(book: Book, bookChapter: BookChapter) {
-        FileUtils.createFileIfNotExist(
-            downloadDir,
-            cacheFolderName,
-            book.getFolderName(),
-            bookChapter.getFileName()
-        ).delete()
-    }
 
     /**
     /**
