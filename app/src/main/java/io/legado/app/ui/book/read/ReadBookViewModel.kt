@@ -451,18 +451,7 @@ class ReadBookViewModel(application: Application) : BaseViewModel(application) {
     }
 
     /**
-     * 翻转删除重复标题
      */
-    fun reverseRemoveSameTitle() {
-        execute {
-            val book = ReadBook.book ?: return@execute
-            val textChapter = ReadBook.curTextChapter ?: return@execute
-            BookHelp.setRemoveSameTitle(
-                book, textChapter.chapter, !textChapter.sameTitleRemoved
-            )
-            ReadBook.loadContent(ReadBook.durChapterIndex)
-        }
-    }
 
     /**
      * 刷新图片
