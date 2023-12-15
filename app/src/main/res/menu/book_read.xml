@@ -78,12 +78,6 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/menu_same_title_removed"
-        android:checkable="true"
-        android:title="@string/same_title_removed"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/menu_re_segment"
         android:checkable="true"
         android:checked="false"
