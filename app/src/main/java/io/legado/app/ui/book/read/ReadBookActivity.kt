@@ -314,11 +314,6 @@ class ReadBookActivity : BaseReadBookActivity(),
         return super.onPrepareOptionsMenu(menu)
     }
 
-    override fun onMenuOpened(featureId: Int, menu: Menu): Boolean {
-        menu.findItem(R.id.menu_same_title_removed)?.isChecked =
-            ReadBook.curTextChapter?.sameTitleRemoved == true
-        return super.onMenuOpened(featureId, menu)
-    }
 
     /**
      * 更新菜单
@@ -489,22 +484,6 @@ class ReadBookActivity : BaseReadBookActivity(),
                 viewModel.syncBookProgress(it) { progress ->
                     sureSyncProgress(progress)
                 }
-            }
-
-            R.id.menu_same_title_removed -> {
-                ReadBook.book?.let {
-                    val contentProcessor = ContentProcessor.get(it)
-                    val textChapter = ReadBook.curTextChapter
-                    if (textChapter != null
-                        && !textChapter.sameTitleRemoved
-                        && !contentProcessor.removeSameTitleCache.contains(
-                            textChapter.chapter.getFileName("nr")
-                        )
-                    ) {
-                        toastOnUi("未找到可移除的重复标题")
-                    }
-                }
-                viewModel.reverseRemoveSameTitle()
             }
 
             R.id.menu_effective_replaces -> showDialogFragment<EffectiveReplacesDialog>()
