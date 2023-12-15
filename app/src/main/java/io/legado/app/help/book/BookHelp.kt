@@ -378,6 +378,15 @@ object BookHelp {
     /**
      * 获取是否去除重复标题
      */
+    fun removeSameTitle(book: Book, bookChapter: BookChapter): Boolean {
+        val path = FileUtils.getPath(
+            downloadDir,
+            cacheFolderName,
+            book.getFolderName(),
+            bookChapter.getFileName("nr")
+        )
+        return false
+    }
 
     /**
      * 格式化书名
